@@ -10,4 +10,5 @@
 
 body {
   scrollbar-width: none;
+  @apply font-body font-normal antialiased bg-white;
 }

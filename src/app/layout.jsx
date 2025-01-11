@@ -1,4 +1,5 @@
 import "./globals.scss";
+import Navbar from "./Navbar";
 
 export const metadata = {
   title: "Create Next App",
@@ -8,7 +9,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`font-body font-normal antialiased`}>{children}</body>
+      <body className=" w-full flex flex-col items-center justify-center">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

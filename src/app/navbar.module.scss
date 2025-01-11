@@ -1,0 +1,10 @@
+.nav_logo {
+  @apply text-[40px] font-bold text-secondary;
+  span {
+    @apply text-primary-200;
+  }
+}
+
+.nav_container {
+  @apply flex fixed justify-between items-center w-full max-w-screen-2xl m-auto mt-10 shadow-sm py-1 px-8 rounded-full;
+}
