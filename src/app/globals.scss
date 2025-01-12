@@ -12,3 +12,13 @@ body {
   scrollbar-width: none;
   @apply font-body font-normal antialiased bg-white;
 }
+
+.border_gradient {
+  background: transparent;
+  background-image: linear-gradient(45deg, white, white),
+    linear-gradient(45deg, #ee7f09, #ffbb00);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 2px solid transparent;
+  border-radius: 999999px;
+}
