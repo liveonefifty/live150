@@ -1,17 +1,21 @@
-import React from "react";
-import styles from "./navbar.module.scss";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <nav className=" w-full flex items-center  fixed top-2 justify-between">
-      <div className="  max-w-screen-2xl w-full mx-auto px-6 ">
-        <div className={styles.nav_container}>
-          <Link className={styles.nav_logo} href="/">
-            Live <span>150</span>
+    <nav className='fixed top-2 z-[9999] flex w-full items-center justify-between'>
+      <div className='mx-auto w-full max-w-screen-2xl px-4'>
+        <div className='m-auto mt-10 flex w-full items-center justify-between rounded-full border-2 border-white bg-white/60 px-6 py-3 shadow-sm backdrop-blur-md'>
+          <Link
+            className='text-2xl font-bold text-secondary md:text-4xl'
+            href='/'
+          >
+            Live <span className='text-primary-200'>150</span>
           </Link>
-          <button className={`${styles.nav_button} border_gradient`}>
-            <Link href="/">Download For Free</Link>
+          <button
+            className={`border_gradient px-3 py-1 font-cta text-sm font-medium md:text-lg`}
+          >
+            <Link href='/'>Download For Free</Link>
           </button>
         </div>
       </div>
