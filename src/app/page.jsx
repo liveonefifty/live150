@@ -1,7 +1,9 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronRightIcon } from '@heroicons/react/20/solid';
 import { Icon } from '@iconify/react';
+import { motion } from 'motion/react';
 import MockupSlider from './MockupSlider';
 import Reviews from './Reviews';
 import ContactUs from './ContactUs';
@@ -12,140 +14,224 @@ import Newsletter from './Newsletter';
 export default function Home() {
   return (
     <>
-      <section className='m-auto mt-4 min-h-[80vh] w-full max-w-screen-2xl rounded-[40px] bg-primary-50 pb-5'>
-        <div className='flex h-full min-h-[80vh] w-full flex-col justify-end gap-4 px-3 md:gap-10'>
+      <section className='m-auto mt-4 min-h-[90vh] w-full max-w-screen-2xl rounded-[40px] bg-primary-50'>
+        <div className='relative flex h-full min-h-[90vh] w-full flex-col justify-end gap-4 md:gap-10'>
+          <div className='absolute z-0 h-full w-full'>
+            <video
+              className='h-full w-full object-cover'
+              src='/hero.mp4'
+              playsInline
+              autoPlay
+              muted
+            ></video>
+          </div>
           <div className='h-20 w-full md:h-32'></div>
-          <h1 className='text_gradient ml-4 font-title text-5xl font-bold md:text-8xl'>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className='text_gradient relative z-10 ml-4 px-3 font-title text-5xl font-bold md:text-8xl'
+          >
             Correct & <br /> Reverse Bad <br /> Health.
-          </h1>
-          <div className='flex w-full flex-col gap-4 rounded-[30px] bg-white p-4 shadow-sm md:flex-row'>
-            <div className='w-full'>
-              <p className='mt-2 text-sm md:text-xl'>
-                Whether you're managing a specific health condition or focusing
-                on general wellness, Live150 helps you achieve your goals
-                through personalized interventions in Nutrition, Activity,
-                Mindfulness, and Sleep.
-              </p>
-              <div className='mt-4 flex gap-2'>
-                <button className='border_gradient h-11 px-3 py-1 font-cta text-sm font-medium md:text-lg'>
-                  <Link className='flex items-center' href='/'>
-                    Get Started{' '}
-                    <ChevronRightIcon className='aspect-square w-8' />
-                  </Link>
-                </button>
-                <button className='border_gradient flex size-11 items-center justify-center'>
-                  <Link className='flex items-center' href='/'>
-                    <Icon icon='simple-icons:appstore' className='w-8' />
-                  </Link>
-                </button>
-                <button className='border_gradient flex size-11 items-center justify-center'>
-                  <Link className='flex items-center' href='/'>
-                    <Icon icon='mage:playstore' className='w-8' />
-                  </Link>
-                </button>
-              </div>
-            </div>
-            <div className='grid w-full gap-4 md:grid-cols-2'>
-              <div className='flex min-h-28 w-full flex-wrap items-center gap-3 rounded-2xl p-4 shadow-md'>
-                <div className='relative aspect-square h-16'>
-                  <Image
-                    src={'/blood.png'}
-                    alt='blood'
-                    className='object-contain object-center'
-                    fill
-                  />
+          </motion.h1>
+          <div className='mb-10 w-full px-3'>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className='shadowG flex w-full flex-col gap-4 rounded-[30px] bg-white/40 p-4 backdrop-blur-md md:flex-row'
+            >
+              <div className='w-full'>
+                <p className='mt-2 text-sm md:text-xl'>
+                  Whether you're managing a specific health condition or
+                  focusing on general wellness, Live150 helps you achieve your
+                  goals through personalized interventions in Nutrition,
+                  Activity, Mindfulness, and Sleep.
+                </p>
+                <div className='mt-4 flex gap-2'>
+                  <button className='border_gradient h-11 px-3 py-1 font-cta text-sm font-medium md:text-lg'>
+                    <Link className='flex items-center' href='/'>
+                      Get Started{' '}
+                      <ChevronRightIcon className='aspect-square w-8' />
+                    </Link>
+                  </button>
+                  <button className='border_gradient flex size-11 items-center justify-center'>
+                    <Link className='flex items-center' href='/'>
+                      <Icon icon='simple-icons:appstore' className='w-8' />
+                    </Link>
+                  </button>
+                  <button className='border_gradient flex size-11 items-center justify-center'>
+                    <Link className='flex items-center' href='/'>
+                      <Icon icon='mage:playstore' className='w-8' />
+                    </Link>
+                  </button>
                 </div>
-                <span className='text_gradient font-title text-xl font-bold'>
-                  Diabetes Care
-                </span>
               </div>
-              <div className='flex min-h-28 w-full flex-wrap items-center gap-3 rounded-2xl p-4 shadow-md'>
-                <div className='relative aspect-square h-16'>
-                  <Image
-                    src={'/blood.png'}
-                    alt='blood'
-                    className='object-contain object-center'
-                    fill
-                  />
-                </div>
-                <span className='text_gradient font-title text-xl font-bold'>
-                  Heart Health
-                </span>
+              <div className='grid w-full gap-4 md:grid-cols-2'>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.8 }}
+                  className='shadowG flex min-h-28 w-full flex-wrap items-center gap-3 rounded-2xl p-4'
+                >
+                  <div className='relative aspect-square h-16'>
+                    <Image
+                      src={'/blood.png'}
+                      alt='blood'
+                      className='object-contain object-center'
+                      fill
+                    />
+                  </div>
+                  <span className='text_gradient font-title text-xl font-bold'>
+                    Diabetes Care
+                  </span>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.8 }}
+                  className='shadowG flex min-h-28 w-full flex-wrap items-center gap-3 rounded-2xl p-4'
+                >
+                  <div className='relative aspect-square h-16'>
+                    <Image
+                      src={'/blood.png'}
+                      alt='blood'
+                      className='object-contain object-center'
+                      fill
+                    />
+                  </div>
+                  <span className='text_gradient font-title text-xl font-bold'>
+                    Heart Health
+                  </span>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.85 }}
+                  className='shadowG flex min-h-28 w-full flex-wrap items-center gap-3 rounded-2xl p-4'
+                >
+                  <div className='relative aspect-square h-16'>
+                    <Image
+                      src={'/meter.png'}
+                      alt='blood'
+                      className='object-contain object-center'
+                      fill
+                    />
+                  </div>
+                  <span className='text_gradient font-title text-xl font-bold'>
+                    Weight Control
+                  </span>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.9 }}
+                  className='shadowG flex min-h-28 w-full flex-wrap items-center gap-3 rounded-2xl p-4'
+                >
+                  <div className='relative aspect-square h-16'>
+                    <Image
+                      src={'/meter.png'}
+                      alt='blood'
+                      className='object-contain object-center'
+                      fill
+                    />
+                  </div>
+                  <span className='text_gradient font-title text-xl font-bold'>
+                    Brain Health
+                  </span>
+                </motion.div>
               </div>
-              <div className='flex min-h-28 w-full flex-wrap items-center gap-3 rounded-2xl p-4 shadow-md'>
-                <div className='relative aspect-square h-16'>
-                  <Image
-                    src={'/meter.png'}
-                    alt='blood'
-                    className='object-contain object-center'
-                    fill
-                  />
-                </div>
-                <span className='text_gradient font-title text-xl font-bold'>
-                  Weight Control
-                </span>
-              </div>
-              <div className='flex min-h-28 w-full flex-wrap items-center gap-3 rounded-2xl p-4 shadow-md'>
-                <div className='relative aspect-square h-16'>
-                  <Image
-                    src={'/meter.png'}
-                    alt='blood'
-                    className='object-contain object-center'
-                    fill
-                  />
-                </div>
-                <span className='text_gradient font-title text-xl font-bold'>
-                  Brain Health
-                </span>
-              </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       <section className='m-auto mt-4 grid w-full max-w-screen-2xl grid-cols-2 gap-4 rounded-[40px] bg-primary-100 p-6 md:grid-cols-4 md:p-12'>
-        <div className='flex flex-wrap items-center gap-2'>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className='flex flex-wrap items-center gap-2'
+        >
           <span className='text_gradient font-title text-5xl font-bold'>
             30M+
           </span>
           <span className='text-lg font-medium leading-5'>
             Research Papers <br /> Analyzed
           </span>
-        </div>
-        <div className='flex flex-wrap items-center gap-2'>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className='flex flex-wrap items-center gap-2'
+        >
           <span className='text_gradient font-title text-5xl font-bold'>
-            30M+
+            95%
           </span>
           <span className='text-lg font-medium leading-5'>
-            Research Papers <br /> Analyzed
+            success <br /> Rate
           </span>
-        </div>
-        <div className='flex flex-wrap items-center gap-2'>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          viewport={{ once: true }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+          className='flex flex-wrap items-center gap-2'
+        >
           <span className='text_gradient font-title text-5xl font-bold'>
-            30M+
+            50+
           </span>
           <span className='text-lg font-medium leading-5'>
-            Research Papers <br /> Analyzed
+            Health Parameters <br /> Tracked
           </span>
-        </div>
-        <div className='flex flex-wrap items-center gap-2'>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          viewport={{ once: true }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className='flex flex-wrap items-center gap-2'
+        >
           <span className='text_gradient font-title text-5xl font-bold'>
-            30M+
+            24/7
           </span>
           <span className='text-lg font-medium leading-5'>
-            Research Papers <br /> Analyzed
+            Ai-Powered <br /> Monitoring
           </span>
-        </div>
+        </motion.div>
       </section>
 
       <section className='m-auto mt-4 w-full max-w-screen-2xl rounded-[40px] bg-gradient-to-br from-primary-200 to-primary-250 px-6 py-10 md:px-12'>
-        <h2 className='font-title text-3xl font-bold text-primary-100 md:text-5xl'>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ margin: '-100px', once: true }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+          className='font-title text-3xl font-bold text-primary-100 md:text-5xl'
+        >
           The Science Behind Live150
-        </h2>
+        </motion.h2>
         <div className='mt-8 flex flex-col gap-4 md:flex-row'>
-          <div className='flex w-full gap-10'>
-            <div className='flex flex-col gap-4 rounded-[30px] bg-primary-50 p-4 shadow-sm'>
-              <div className='aspect-video w-full rounded-3xl bg-primary-150'></div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ margin: '-200px', once: true }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className='flex w-full gap-10'
+          >
+            <div className='shadowG flex flex-col gap-4 rounded-[30px] bg-primary-50 p-4 pb-10'>
+              <div className='relative aspect-video w-full overflow-hidden rounded-3xl bg-primary-150'>
+                <Image
+                  src={'/science/epi.png'}
+                  alt='blood'
+                  className='object-contain object-center'
+                  fill
+                />
+              </div>
               <div>
                 <h3 className='text-2xl font-bold'>
                   Epigenetics & Health Optimization
@@ -157,37 +243,59 @@ export default function Home() {
                 </p>
               </div>
             </div>
-          </div>
-          <div className='flex w-full gap-10'>
-            <div className='flex flex-col gap-4 rounded-[30px] bg-primary-50 p-4 shadow-sm'>
-              <div className='aspect-video w-full rounded-3xl bg-primary-150'></div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ margin: '-200px', once: true }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className='flex w-full gap-10'
+          >
+            <div className='shadowG flex flex-col gap-4 rounded-[30px] bg-primary-50 p-4 pb-10'>
+              <div className='relative aspect-video w-full overflow-hidden rounded-3xl bg-primary-150'>
+                <Image
+                  src={'/science/aipower.png'}
+                  alt='blood'
+                  className='object-contain object-center'
+                  fill
+                />
+              </div>
               <div>
-                <h3 className='text-2xl font-bold'>
-                  Epigenetics & Health Optimization
-                </h3>
+                <h3 className='text-2xl font-bold'>AI-Powered Analysis</h3>
                 <p>
-                  Our approach leverages the latest research in epigenetics,
-                  showing how lifestyle factors can influence gene expression
-                  and health outcomes.
+                  Our systems analyze millions of peer-reviewed studies to
+                  provide personalized recommendations based on your unique
+                  health profile.
                 </p>
               </div>
             </div>
-          </div>
-          <div className='flex w-full gap-10'>
-            <div className='flex flex-col gap-4 rounded-[30px] bg-primary-50 p-4 shadow-sm'>
-              <div className='aspect-video w-full rounded-3xl bg-primary-150'></div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ margin: '-200px', once: true }}
+            transition={{ duration: 0.5, delay: 0.7 }}
+            className='flex w-full gap-10'
+          >
+            <div className='shadowG flex flex-col gap-4 rounded-[30px] bg-primary-50 p-4 pb-10'>
+              <div className='relative aspect-video w-full overflow-hidden rounded-3xl bg-primary-150'>
+                <Image
+                  src={'/science/adapt.png'}
+                  alt='blood'
+                  className='object-contain object-center'
+                  fill
+                />
+              </div>
               <div>
-                <h3 className='text-2xl font-bold'>
-                  Epigenetics & Health Optimization
-                </h3>
+                <h3 className='text-2xl font-bold'>Continuous Adaptation</h3>
                 <p>
-                  Our approach leverages the latest research in epigenetics,
-                  showing how lifestyle factors can influence gene expression
-                  and health outcomes.
+                  Machine learning algorithms continuously refine
+                  recommendations based on your progress and response to
+                  interventions.
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -197,30 +305,51 @@ export default function Home() {
 
       <section className='m-auto mt-4 flex w-full max-w-screen-2xl flex-col gap-4 md:flex-row'>
         <div className='flex w-full flex-col gap-4 rounded-[40px] bg-primary-50 p-6 md:gap-20 md:p-12'>
-          <h3 className='text_gradient mt-10 font-title text-3xl font-bold md:text-5xl'>
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ margin: '-100px', once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className='text_gradient mt-10 font-title text-3xl font-bold md:text-5xl'
+          >
             Our Unique Approach
-          </h3>
-          <div>
+          </motion.h3>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ margin: '-100px', once: true }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
             <h4 className='text-3xl font-medium'>Multi-Agent AI Model</h4>
             <p className='mt-4 text-xl'>
               Combines expertise from nutritionists, fitness experts, and
               mindfulness coaches for comprehensive care.
             </p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ margin: '-100px', once: true }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          >
             <h4 className='text-3xl font-medium'>Digital Health Twin</h4>
             <p className='mt-4 text-xl'>
               Creates your virtual health profile for hyper-personalized
               recommendations that evolve with you.
             </p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ margin: '-100px', once: true }}
+            transition={{ duration: 0.5, delay: 0.7 }}
+          >
             <h4 className='text-3xl font-medium'>Habit-Building Module</h4>
             <p className='mt-4 text-xl'>
               Guides you in developing sustainable wellness routines through
               personalized, actionable insights.
             </p>
-          </div>
+          </motion.div>
         </div>
         <div className='w-full rounded-[40px] bg-gradient-to-br from-primary-200 to-primary-250 p-6 md:p-12'>
           <Reviews />
@@ -228,41 +357,80 @@ export default function Home() {
       </section>
 
       <section className='m-auto mt-4 w-full max-w-screen-2xl rounded-[40px] bg-gradient-to-br from-primary-100 to-primary-150 py-10'>
-        <h3 className='text_gradient mt-10 w-full px-6 text-center font-title text-3xl font-bold md:px-12 md:text-5xl'>
+        <motion.h3
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ margin: '-100px', once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className='text_gradient mt-10 w-full px-6 text-center font-title text-3xl font-bold md:px-12 md:text-5xl'
+        >
           Holistic Health Management
-        </h3>
-        <div className='relative mt-20 aspect-[1402/401] w-full'>
+        </motion.h3>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ margin: '-100px', once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className='relative aspect-[393/852] w-full md:mt-20 md:aspect-[1402/401]'
+        >
           <Image
             src={'/chart.png'}
             alt='blood'
-            className='object-contain object-center'
+            className='hidden object-contain object-center md:block'
             fill
           />
-        </div>
+          <Image
+            src={'/chartm.png'}
+            alt='blood'
+            className='object-contain object-center md:hidden'
+            fill
+          />
+        </motion.div>
       </section>
 
       <section className='m-auto mt-4 w-full max-w-screen-2xl rounded-[40px] bg-primary-50 px-6 py-10 md:px-12'>
-        <h3 className='text_gradient mt-10 font-title text-3xl font-bold md:text-5xl'>
+        <motion.h3
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ margin: '-100px', once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className='text_gradient mt-10 font-title text-3xl font-bold md:text-5xl'
+        >
           Frequently Asked Questions
-        </h3>
+        </motion.h3>
         <div className='mt-10 flex flex-col gap-4 md:flex-row md:gap-20'>
           <div className='flex w-full flex-col gap-4 md:gap-20'>
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ margin: '-100px', once: true }}
+              transition={{ duration: 0.5, delay: 0.35 }}
+            >
               <h4 className='text-3xl font-medium'>What is Live150?</h4>
               <p className='mt-4 text-xl'>
                 Live150 is a holistic healthcare platform that helps you extend
                 your healthspan and lifespan through personalized guidance on
                 nutrition, fitness, mindfulness, and sleep.
               </p>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ margin: '-100px', once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
               <h4 className='text-3xl font-medium'>Who can use Live150?</h4>
               <p className='mt-4 text-xl'>
                 Live150 is designed for anyone looking to improve their health
                 and wellness, regardless of age or fitness level.
               </p>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ margin: '-100px', once: true }}
+              transition={{ duration: 0.5, delay: 0.45 }}
+            >
               <h4 className='text-3xl font-medium'>
                 Does Live150 support multiple languages?
               </h4>
@@ -270,17 +438,27 @@ export default function Home() {
                 Currently, Live150 is available in English, with plans to expand
                 to other languages in the near future.
               </p>
-            </div>
+            </motion.div>
           </div>
           <div className='flex w-full flex-col gap-4 md:gap-20'>
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ margin: '-100px', once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
               <h4 className='text-3xl font-medium'>How does Live150 work?</h4>
               <p className='mt-4 text-xl'>
                 Live150 uses advanced AI to learn from your habits and provide
                 tailored recommendations for your wellness journey.
               </p>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ margin: '-100px', once: true }}
+              transition={{ duration: 0.5, delay: 0.55 }}
+            >
               <h4 className='text-3xl font-medium'>
                 Is Live150 available globally?
               </h4>
@@ -288,27 +466,51 @@ export default function Home() {
                 Yes, Live150 is accessible worldwide, offering personalized
                 advice and services based on local preferences.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       <section className='m-auto mt-4 flex w-full max-w-screen-2xl flex-col gap-4 md:flex-row'>
         <div className='flex w-full flex-col-reverse gap-6 md:w-3/5 md:flex-col'>
-          <div className='w-full rounded-[40px] bg-primary-50 p-6 md:p-12'>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ margin: '-100px', once: true }}
+            transition={{ duration: 0.5, delay: 0.7 }}
+            className='w-full rounded-[40px] bg-primary-50 p-6 md:p-12'
+          >
             <Discover />
-          </div>
-          <div className='h-full w-full rounded-[40px] bg-gradient-to-br from-primary-100 to-primary-150 p-6 md:p-12'>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ margin: '-100px', once: true }}
+            transition={{ duration: 0.5, delay: 0.75 }}
+            className='h-full w-full rounded-[40px] bg-gradient-to-br from-primary-100 to-primary-150 p-6 md:p-12'
+          >
             <ContactUs />
-          </div>
+          </motion.div>
         </div>
         <div className='flex w-full flex-col gap-6 md:w-2/5'>
-          <div className='h-full w-full rounded-[40px] bg-gradient-to-br from-primary-200 to-primary-250 p-6 md:p-12'>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ margin: '-100px', once: true }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+            className='h-full w-full rounded-[40px] bg-gradient-to-br from-primary-200 to-primary-250 p-6 md:p-12'
+          >
             <Newsletter />
-          </div>
-          <div className='w-full rounded-[40px] bg-primary-50 p-6 md:p-12'>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ margin: '-100px', once: true }}
+            transition={{ duration: 0.5, delay: 0.85 }}
+            className='w-full rounded-[40px] bg-primary-50 p-6 md:p-12'
+          >
             <StalkUs />
-          </div>
+          </motion.div>
         </div>
       </section>
     </>

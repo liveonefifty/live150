@@ -1,13 +1,20 @@
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'motion/react';
 
 export default function Reviews() {
   return (
     <div>
-      <h3 className='mt-10 font-title text-3xl font-bold text-primary-100 md:text-5xl'>
+      <motion.h3
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ margin: '-100px', once: true }}
+        transition={{ duration: 0.5, delay: 0.45 }}
+        className='mt-10 font-title text-3xl font-bold text-primary-100 md:text-5xl'
+      >
         Your Personalized Health <br className='hidden md:block' /> Journey Made
         Simple
-      </h3>
+      </motion.h3>
       <div className='mt-4 aspect-video w-full rounded-2xl bg-primary-150'></div>
       <div className='mt-4 text-xl font-medium text-primary-100'>
         <p>
