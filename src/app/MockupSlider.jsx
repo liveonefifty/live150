@@ -11,19 +11,19 @@ export default function MockupSlider() {
       contentLeft: 'Holistic Forward-Looking Plans',
       ContentRight:
         'Log your meals, activities, mindfulness, and sleep for holistic forward-looking plans.',
-      image: '/Frame1.jpg',
+      image: '/Frame1.png',
     },
     {
       contentLeft: 'Frictionless Guidance',
       ContentRight:
         'Simply upload a photo of your meal for real-time advice-no extra steps needed.',
-      image: '/Frame1.jpg',
+      image: '/Frame2.png',
     },
     {
       contentLeft: 'Hyper-Personalized Support',
       ContentRight:
         'Get advice tailored to your demographics and preferences, making your health journey uniquely yours.',
-      image: '/Frame1.jpg',
+      image: '/Frame3.png',
     },
   ];
 
@@ -74,7 +74,7 @@ export default function MockupSlider() {
                 {slides[currentSlide].contentLeft}
               </motion.p>
             </motion.div>
-            <motion.div className='relative aspect-[382/669] h-full'>
+            <motion.div className='relative aspect-[267.92/569.21] h-full'>
               <Image
                 src={slides[currentSlide].image}
                 alt='blood'
