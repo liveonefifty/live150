@@ -14,9 +14,9 @@ import Newsletter from './Newsletter';
 export default function Home() {
   return (
     <>
-      <section className='m-auto mt-4 min-h-[90vh] w-full max-w-screen-2xl rounded-[40px] bg-primary-50'>
-        <div className='relative flex h-full min-h-[90vh] w-full flex-col justify-end gap-4 md:gap-10'>
-          <div className='absolute z-0 h-full w-full'>
+      <section className='m-auto mt-4 w-full max-w-screen-2xl'>
+        <div className='relative flex h-full w-full flex-col justify-end gap-4 md:gap-10'>
+          <div className='z-0 mt-32 aspect-video max-h-[90vh] w-full md:mt-20'>
             <video
               className='h-full w-full object-cover'
               src='/hero.mp4'
@@ -25,123 +25,124 @@ export default function Home() {
               muted
             ></video>
           </div>
-          <div className='h-20 w-full md:h-32'></div>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className='text_gradient relative z-10 ml-4 px-3 font-title text-5xl font-bold md:text-8xl'
-          >
-            Correct & <br /> Reverse Bad <br /> Health.
-          </motion.h1>
-          <div className='mb-10 w-full px-3'>
-            <motion.div
+          <div className='mt-10 rounded-[40px] bg-primary-50 pt-10'>
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className='shadowG flex w-full flex-col gap-4 rounded-[30px] bg-white/40 p-4 backdrop-blur-md md:flex-row'
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className='text_gradient relative z-10 ml-4 px-3 font-title text-5xl font-bold md:text-8xl'
             >
-              <div className='w-full'>
-                <p className='mt-2 text-sm md:text-xl'>
-                  Whether you're managing a specific health condition or
-                  focusing on general wellness, Live150 helps you achieve your
-                  goals through personalized interventions in Nutrition,
-                  Activity, Mindfulness, and Sleep.
-                </p>
-                <div className='mt-4 flex gap-2'>
-                  <button className='border_gradient h-11 px-3 py-1 font-cta text-sm font-medium md:text-lg'>
-                    <Link className='flex items-center' href='/'>
-                      Get Started{' '}
-                      <ChevronRightIcon className='aspect-square w-8' />
-                    </Link>
-                  </button>
-                  <button className='border_gradient flex size-11 items-center justify-center'>
-                    <Link className='flex items-center' href='/'>
-                      <Icon icon='simple-icons:appstore' className='w-8' />
-                    </Link>
-                  </button>
-                  <button className='border_gradient flex size-11 items-center justify-center'>
-                    <Link className='flex items-center' href='/'>
-                      <Icon icon='mage:playstore' className='w-8' />
-                    </Link>
-                  </button>
+              Correct & <br /> Reverse Bad <br /> Health.
+            </motion.h1>
+            <div className='mb-10 w-full px-3'>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className='shadowG flex w-full flex-col gap-4 rounded-[30px] bg-white/40 p-4 backdrop-blur-md md:flex-row'
+              >
+                <div className='w-full'>
+                  <p className='mt-2 text-sm md:text-xl'>
+                    Whether you're managing a specific health condition or
+                    focusing on general wellness, Live150 helps you achieve your
+                    goals through personalized interventions in Nutrition,
+                    Activity, Mindfulness, and Sleep.
+                  </p>
+                  <div className='mt-4 flex gap-2'>
+                    <button className='border_gradient h-11 px-3 py-1 font-cta text-sm font-medium md:text-lg'>
+                      <Link className='flex items-center' href='/'>
+                        Get Started{' '}
+                        <ChevronRightIcon className='aspect-square w-8' />
+                      </Link>
+                    </button>
+                    <button className='border_gradient flex size-11 items-center justify-center'>
+                      <Link className='flex items-center' href='/'>
+                        <Icon icon='simple-icons:appstore' className='w-8' />
+                      </Link>
+                    </button>
+                    <button className='border_gradient flex size-11 items-center justify-center'>
+                      <Link className='flex items-center' href='/'>
+                        <Icon icon='mage:playstore' className='w-8' />
+                      </Link>
+                    </button>
+                  </div>
                 </div>
-              </div>
-              <div className='grid w-full gap-4 md:grid-cols-2'>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.8 }}
-                  className='shadowG flex min-h-28 w-full flex-wrap items-center gap-3 rounded-2xl p-4'
-                >
-                  <div className='relative aspect-square h-16'>
-                    <Image
-                      src={'/blood.png'}
-                      alt='blood'
-                      className='object-contain object-center'
-                      fill
-                    />
-                  </div>
-                  <span className='text_gradient font-title text-xl font-bold'>
-                    Diabetes Care
-                  </span>
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.8 }}
-                  className='shadowG flex min-h-28 w-full flex-wrap items-center gap-3 rounded-2xl p-4'
-                >
-                  <div className='relative aspect-square h-16'>
-                    <Image
-                      src={'/blood.png'}
-                      alt='blood'
-                      className='object-contain object-center'
-                      fill
-                    />
-                  </div>
-                  <span className='text_gradient font-title text-xl font-bold'>
-                    Heart Health
-                  </span>
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.85 }}
-                  className='shadowG flex min-h-28 w-full flex-wrap items-center gap-3 rounded-2xl p-4'
-                >
-                  <div className='relative aspect-square h-16'>
-                    <Image
-                      src={'/meter.png'}
-                      alt='blood'
-                      className='object-contain object-center'
-                      fill
-                    />
-                  </div>
-                  <span className='text_gradient font-title text-xl font-bold'>
-                    Weight Control
-                  </span>
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.9 }}
-                  className='shadowG flex min-h-28 w-full flex-wrap items-center gap-3 rounded-2xl p-4'
-                >
-                  <div className='relative aspect-square h-16'>
-                    <Image
-                      src={'/meter.png'}
-                      alt='blood'
-                      className='object-contain object-center'
-                      fill
-                    />
-                  </div>
-                  <span className='text_gradient font-title text-xl font-bold'>
-                    Brain Health
-                  </span>
-                </motion.div>
-              </div>
-            </motion.div>
+                <div className='grid w-full gap-4 md:grid-cols-2'>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.8 }}
+                    className='shadowG flex min-h-28 w-full flex-wrap items-center gap-3 rounded-2xl p-4'
+                  >
+                    <div className='relative aspect-square h-16'>
+                      <Image
+                        src={'/blood.png'}
+                        alt='blood'
+                        className='object-contain object-center'
+                        fill
+                      />
+                    </div>
+                    <span className='text_gradient font-title text-xl font-bold'>
+                      Diabetes Care
+                    </span>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.8 }}
+                    className='shadowG flex min-h-28 w-full flex-wrap items-center gap-3 rounded-2xl p-4'
+                  >
+                    <div className='relative aspect-square h-16'>
+                      <Image
+                        src={'/blood.png'}
+                        alt='blood'
+                        className='object-contain object-center'
+                        fill
+                      />
+                    </div>
+                    <span className='text_gradient font-title text-xl font-bold'>
+                      Heart Health
+                    </span>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.85 }}
+                    className='shadowG flex min-h-28 w-full flex-wrap items-center gap-3 rounded-2xl p-4'
+                  >
+                    <div className='relative aspect-square h-16'>
+                      <Image
+                        src={'/meter.png'}
+                        alt='blood'
+                        className='object-contain object-center'
+                        fill
+                      />
+                    </div>
+                    <span className='text_gradient font-title text-xl font-bold'>
+                      Weight Control
+                    </span>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.9 }}
+                    className='shadowG flex min-h-28 w-full flex-wrap items-center gap-3 rounded-2xl p-4'
+                  >
+                    <div className='relative aspect-square h-16'>
+                      <Image
+                        src={'/meter.png'}
+                        alt='blood'
+                        className='object-contain object-center'
+                        fill
+                      />
+                    </div>
+                    <span className='text_gradient font-title text-xl font-bold'>
+                      Brain Health
+                    </span>
+                  </motion.div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -223,7 +224,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.5 }}
             className='flex w-full gap-10'
           >
-            <div className='shadowG flex flex-col gap-4 rounded-[30px] bg-primary-50 p-4 pb-10'>
+            <div className='shadowG flex flex-col gap-4 rounded-[30px] bg-primary-50 p-4 pb-10 duration-300 hover:scale-[1.025] hover:shadow-2xl'>
               <div className='relative aspect-video w-full overflow-hidden rounded-3xl bg-primary-150'>
                 <Image
                   src={'/science/epi.png'}
@@ -251,7 +252,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.6 }}
             className='flex w-full gap-10'
           >
-            <div className='shadowG flex flex-col gap-4 rounded-[30px] bg-primary-50 p-4 pb-10'>
+            <div className='shadowG flex flex-col gap-4 rounded-[30px] bg-primary-50 p-4 pb-10 duration-300 hover:scale-[1.025] hover:shadow-2xl'>
               <div className='relative aspect-video w-full overflow-hidden rounded-3xl bg-primary-150'>
                 <Image
                   src={'/science/aipower.png'}
@@ -277,7 +278,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.7 }}
             className='flex w-full gap-10'
           >
-            <div className='shadowG flex flex-col gap-4 rounded-[30px] bg-primary-50 p-4 pb-10'>
+            <div className='shadowG flex flex-col gap-4 rounded-[30px] bg-primary-50 p-4 pb-10 duration-300 hover:scale-[1.025] hover:shadow-2xl'>
               <div className='relative aspect-video w-full overflow-hidden rounded-3xl bg-primary-150'>
                 <Image
                   src={'/science/adapt.png'}
