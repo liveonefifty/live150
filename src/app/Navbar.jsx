@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { Icon } from '@iconify/react';
 
 export default function Navbar() {
   return (
@@ -12,11 +13,32 @@ export default function Navbar() {
           >
             Live <span className='text-primary-200'>150</span>
           </Link>
-          <button
-            className={`border_gradient px-3 py-1 font-cta text-sm font-medium md:text-lg`}
-          >
-            <Link href='/'>Download For Free</Link>
-          </button>
+          <div className='flex items-center gap-1'>
+            <Link
+              className=''
+              href='https://play.google.com/store/search?q=live150&c=apps&pli=1'
+              target='_blank'
+            >
+              <button
+                className={`border_gradient flex items-center gap-0.5 px-3 py-1 font-cta text-sm font-medium md:text-lg`}
+              >
+                <Icon icon='mage:playstore' />
+                Download Android
+              </button>
+            </Link>
+            <Link
+              className=''
+              href='https://apps.apple.com/in/app/live-150/id6476695303'
+              target='_blank'
+            >
+              <button
+                className={`border_gradient flex items-center gap-0.5 px-3 py-1 font-cta text-sm font-medium md:text-lg`}
+              >
+                <Icon icon='simple-icons:appstore' />
+                Download Ios
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </nav>

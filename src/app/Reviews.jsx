@@ -15,8 +15,15 @@ export default function Reviews() {
         Your Personalized Health <br className='hidden md:block' /> Journey Made
         Simple
       </motion.h3>
-      <div className='mt-4 aspect-video w-full rounded-2xl bg-primary-150'></div>
-      <div className='mt-4 text-xl font-medium text-primary-100'>
+      <div className='mt-10 aspect-[640/480] w-full overflow-hidden rounded-2xl bg-primary-150'>
+        <iframe
+          src='https://drive.google.com/file/d/1YopDmRFQTCVFzkovmg2NJJJEdvRrec0h/preview'
+          width='100%'
+          height='100%'
+          allow='autoplay'
+        ></iframe>
+      </div>
+      {/* <div className='mt-4 text-xl font-medium text-primary-100'>
         <p>
           The Digital Health Twin feature has been a game-changer for me. It's
           like having a personal health coach that understands my body and
@@ -47,7 +54,7 @@ export default function Reviews() {
             fill
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

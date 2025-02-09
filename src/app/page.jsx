@@ -18,7 +18,7 @@ export default function Home() {
         <div className='relative flex h-full w-full flex-col justify-end gap-4 md:gap-10'>
           <div className='z-0 mt-32 aspect-video max-h-[90vh] w-full md:mt-20'>
             <video
-              className='h-full w-full object-cover'
+              className='h-full w-full rounded-md object-cover'
               src='/hero.mp4'
               playsInline
               autoPlay
@@ -50,18 +50,30 @@ export default function Home() {
                   </p>
                   <div className='mt-4 flex gap-2'>
                     <button className='border_gradient h-11 px-3 py-1 font-cta text-sm font-medium md:text-lg'>
-                      <Link className='flex items-center' href='/'>
+                      <Link
+                        className='flex items-center'
+                        href='https://wa.me/+17322735077'
+                        target='_blank'
+                      >
                         Get Started{' '}
                         <ChevronRightIcon className='aspect-square w-8' />
                       </Link>
                     </button>
                     <button className='border_gradient flex size-11 items-center justify-center'>
-                      <Link className='flex items-center' href='/'>
+                      <Link
+                        className='flex items-center'
+                        href='https://apps.apple.com/in/app/live-150/id6476695303'
+                        target='_blank'
+                      >
                         <Icon icon='simple-icons:appstore' className='w-8' />
                       </Link>
                     </button>
                     <button className='border_gradient flex size-11 items-center justify-center'>
-                      <Link className='flex items-center' href='/'>
+                      <Link
+                        className='flex items-center'
+                        href='https://play.google.com/store/search?q=live150&c=apps&pli=1'
+                        target='_blank'
+                      >
                         <Icon icon='mage:playstore' className='w-8' />
                       </Link>
                     </button>
@@ -469,49 +481,6 @@ export default function Home() {
               </p>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      <section className='m-auto mt-4 flex w-full max-w-screen-2xl flex-col gap-4 md:flex-row'>
-        <div className='flex w-full flex-col-reverse gap-6 md:w-3/5 md:flex-col'>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ margin: '-100px', once: true }}
-            transition={{ duration: 0.5, delay: 0.7 }}
-            className='w-full rounded-[40px] bg-primary-50 p-6 md:p-12'
-          >
-            <Discover />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ margin: '-100px', once: true }}
-            transition={{ duration: 0.5, delay: 0.75 }}
-            className='h-full w-full rounded-[40px] bg-gradient-to-br from-primary-100 to-primary-150 p-6 md:p-12'
-          >
-            <ContactUs />
-          </motion.div>
-        </div>
-        <div className='flex w-full flex-col gap-6 md:w-2/5'>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ margin: '-100px', once: true }}
-            transition={{ duration: 0.5, delay: 0.8 }}
-            className='h-full w-full rounded-[40px] bg-gradient-to-br from-primary-200 to-primary-250 p-6 md:p-12'
-          >
-            <Newsletter />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ margin: '-100px', once: true }}
-            transition={{ duration: 0.5, delay: 0.85 }}
-            className='w-full rounded-[40px] bg-primary-50 p-6 md:p-12'
-          >
-            <StalkUs />
-          </motion.div>
         </div>
       </section>
     </>
