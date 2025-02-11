@@ -9,12 +9,16 @@ export default function Newsletter() {
         Our Unique Approach
       </h3>
       <p className='mt-4 text-xl text-primary-100'>
-        Scan the qr code to learn more.
+        Scan the QR code to learn more.
       </p>
       <div className='flex w-full items-center justify-center'>
-        <div className='mt-4 aspect-square w-full max-w-xs'>
+        <Link
+          className='mt-4 aspect-square w-full max-w-xs'
+          href='https://wa.me/+17322735077'
+          target='_blank'
+        >
           <QrCode />
-        </div>
+        </Link>
       </div>
       {/* <div className='mt-10 w-[80%]'>
         <input

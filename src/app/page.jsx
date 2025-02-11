@@ -16,13 +16,14 @@ export default function Home() {
     <>
       <section className='m-auto mt-4 w-full max-w-screen-2xl'>
         <div className='relative flex h-full w-full flex-col justify-end gap-4 md:gap-10'>
-          <div className='z-0 mt-32 aspect-video max-h-[90vh] w-full md:mt-20'>
+          <div className='z-0 mt-[120px] aspect-video max-h-[calc(90vh-100px)] w-full'>
             <video
               className='h-full w-full rounded-md object-cover'
               src='/hero.mp4'
               playsInline
               autoPlay
               muted
+              loop
             ></video>
           </div>
           <div className='mt-10 rounded-[40px] bg-primary-50 pt-10'>
@@ -30,9 +31,9 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className='text_gradient relative z-10 ml-4 px-3 font-title text-5xl font-bold md:text-8xl'
+              className='text_gradient relative z-10 mb-2 ml-4 px-3 pb-4 font-title text-5xl font-bold md:text-8xl'
             >
-              Correct & <br /> Reverse Bad <br /> Health.
+              Live Healthier & Live Longer.
             </motion.h1>
             <div className='mb-10 w-full px-3'>
               <motion.div
@@ -106,8 +107,8 @@ export default function Home() {
                   >
                     <div className='relative aspect-square h-16'>
                       <Image
-                        src={'/blood.png'}
-                        alt='blood'
+                        src={'/heart.png'}
+                        alt='heart'
                         className='object-contain object-center'
                         fill
                       />
@@ -142,8 +143,8 @@ export default function Home() {
                   >
                     <div className='relative aspect-square h-16'>
                       <Image
-                        src={'/meter.png'}
-                        alt='blood'
+                        src={'/brain.png'}
+                        alt='brain'
                         className='object-contain object-center'
                         fill
                       />

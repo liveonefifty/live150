@@ -10,13 +10,13 @@ export default function MockupSlider() {
     {
       contentLeft: 'Holistic Forward-Looking Plans',
       ContentRight:
-        'Log your meals, activities, mindfulness, and sleep for holistic forward-looking plans.',
+        'Simply upload a photo of your meal for real-time advice-no extra steps needed.',
       image: '/Frame1.png',
     },
     {
       contentLeft: 'Frictionless Guidance',
       ContentRight:
-        'Simply upload a photo of your meal for real-time advice-no extra steps needed.',
+        'Log your meals, activities, mindfulness, and sleep for holistic forward-looking plans.',
       image: '/Frame2.png',
     },
     {

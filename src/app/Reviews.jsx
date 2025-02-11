@@ -12,12 +12,11 @@ export default function Reviews() {
         transition={{ duration: 0.5, delay: 0.45 }}
         className='mt-10 font-title text-3xl font-bold text-primary-100 md:text-5xl'
       >
-        Your Personalized Health <br className='hidden md:block' /> Journey Made
-        Simple
+        What Our Users Say About Their Live150 Journey
       </motion.h3>
       <div className='mt-10 aspect-[640/480] w-full overflow-hidden rounded-2xl bg-primary-150'>
         <iframe
-          src='https://drive.google.com/file/d/1YopDmRFQTCVFzkovmg2NJJJEdvRrec0h/preview'
+          src='https://drive.google.com/file/d/10RI95lRgGD0-TTnjOrjN9cicK_hgOVJR/preview'
           width='100%'
           height='100%'
           allow='autoplay'
