@@ -15,7 +15,7 @@ export default function Navbar() {
           </Link>
           <div className='flex items-center gap-1'>
             <Link
-              className='aspect-[119.66/40] h-[40px]'
+              className='aspect-[119.66/40] h-[35px]'
               href='https://apps.apple.com/in/app/live-150/id6476695303'
               target='_blank'
             >
@@ -25,7 +25,7 @@ export default function Navbar() {
               href='https://play.google.com/store/search?q=live150&c=apps&pli=1'
               target='_blank'
             >
-              <div className='relative aspect-[119.66/40] h-[40px]'>
+              <div className='relative aspect-[119.66/40] h-[38px]'>
                 <Image
                   alt='Playstore'
                   className='h-full w-full object-contain'
