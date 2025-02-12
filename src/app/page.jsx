@@ -232,7 +232,7 @@ export default function Home() {
         <div className='mt-8 flex flex-col gap-4 md:flex-row'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 0.3, y: 0 }}
             viewport={{ margin: '-200px', once: true }}
             transition={{ duration: 0.5, delay: 0.5 }}
             className='flex w-full gap-10'

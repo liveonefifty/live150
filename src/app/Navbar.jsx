@@ -22,16 +22,17 @@ export default function Navbar() {
               <AppstoreLogo />
             </Link>
             <Link
-              className='relative aspect-[119.66/40] h-[44px]'
               href='https://play.google.com/store/search?q=live150&c=apps&pli=1'
               target='_blank'
             >
-              <Image
-                alt='Playstore'
-                className='h-full w-full object-contain'
-                fill
-                src='/playstore.png'
-              />
+              <div className='relative aspect-[119.66/40] h-[40px]'>
+                <Image
+                  alt='Playstore'
+                  className='h-full w-full object-contain'
+                  fill
+                  src='/playstore.png'
+                />
+              </div>
             </Link>
           </div>
         </div>

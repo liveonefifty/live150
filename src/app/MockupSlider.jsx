@@ -36,7 +36,7 @@ export default function MockupSlider() {
   }, [currentSlide]);
 
   return (
-    <>
+    <div>
       <motion.h3
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -137,6 +137,6 @@ export default function MockupSlider() {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 }
