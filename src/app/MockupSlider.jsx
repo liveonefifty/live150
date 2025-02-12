@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import Image from 'next/image';
@@ -8,13 +9,13 @@ export default function MockupSlider() {
 
   const slides = [
     {
-      contentLeft: 'Holistic Forward-Looking Plans',
+      contentLeft: 'Frictionless Guidance',
       ContentRight:
         'Simply upload a photo of your meal for real-time advice-no extra steps needed.',
       image: '/Frame1.png',
     },
     {
-      contentLeft: 'Frictionless Guidance',
+      contentLeft: 'Holistic Forward-Looking Plans',
       ContentRight:
         'Log your meals, activities, mindfulness, and sleep for holistic forward-looking plans.',
       image: '/Frame2.png',
