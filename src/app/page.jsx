@@ -231,32 +231,32 @@ export default function Home() {
         </motion.h2>
         <div className='mt-8 flex flex-col gap-4 md:flex-row'>
           <motion.div
-            initial={{ opacity: 1, y: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ margin: '-200px', once: true }}
             transition={{ duration: 0.5, delay: 0.5 }}
             className='flex w-full gap-10'
           >
-            <div className='shadowG flex flex-col gap-4 rounded-[30px] bg-primary-50 p-4 pb-10 duration-300 hover:scale-[1.025] hover:shadow-2xl'>
-              <div className='relative aspect-video w-full overflow-hidden rounded-3xl bg-primary-150'>
+            <motion.div className='shadowG flex flex-col gap-4 rounded-[30px] bg-primary-50 p-4 pb-10 duration-300 hover:scale-[1.025] hover:shadow-2xl'>
+              <motion.div className='relative aspect-video w-full overflow-hidden rounded-3xl bg-primary-150'>
                 <Image
                   src={'/science/epi.png'}
                   alt='blood'
                   className='object-contain object-center'
                   fill
                 />
-              </div>
-              <div>
-                <h3 className='text-2xl font-bold'>
+              </motion.div>
+              <motion.div>
+                <motion.h3 className='text-2xl font-bold'>
                   Epigenetics & Health Optimization
-                </h3>
-                <p>
+                </motion.h3>
+                <motion.p>
                   Our approach leverages the latest research in epigenetics,
                   showing how lifestyle factors can influence gene expression
                   and health outcomes.
-                </p>
-              </div>
-            </div>
+                </motion.p>
+              </motion.div>
+            </motion.div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
