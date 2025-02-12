@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <section className='m-auto mt-4 w-full max-w-screen-2xl'>
         <div className='relative flex h-full w-full flex-col justify-end gap-4 md:gap-10'>
-          <div className='z-0 mt-[120px] aspect-video max-h-[calc(90vh-100px)] w-full'>
+          <div className='z-0 mt-[90px] aspect-video w-full'>
             <video
               className='h-full w-full rounded-md object-cover'
               src='/hero.mp4'
