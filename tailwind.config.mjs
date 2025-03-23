@@ -9,14 +9,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#F8F8F8',
-          100: '#FFF6E9',
-          150: '#FFF1D4',
-          200: '#EE7F09',
-          250: '#FFBB00',
-        },
-        secondary: '#252525',
+        primary: '#FE601B',
+        secondary: '#3D3576',
         crimson: '#EE092D',
       },
       fontFamily: {

@@ -83,10 +83,10 @@ export default function ContactUs() {
 
   return (
     <div>
-      <h3 className='text_gradient font-title text-3xl font-bold md:text-5xl'>
+      <h3 className='font-title text-3xl md:text-5xl'>
         Let&apos;s Build a Relationship That Matters
       </h3>
-      <p className='mt-5 text-xl'>
+      <p className='mt-5'>
         Welcome to our Newsletter! Track our progress and keep in touch with our
         development.
       </p>
@@ -126,21 +126,28 @@ export default function ContactUs() {
       </div>
 
       {/* {messageError && ( "Message is required" )} */}
+      <div className='mt-4 flex flex-col items-center gap-2 md:flex-row'>
+        {loading ? (
+          <button className='hover:bg-primary hover:border-primary flex h-11 items-center gap-0 rounded-full border border-white px-3 py-1 font-cta text-sm font-medium md:text-lg'>
+            Loading...
+            <ArrowPathIcon className='aspect-square w-6 animate-spin' />
+          </button>
+        ) : (
+          <button
+            onClick={handleSubmit}
+            className='hover:bg-primary hover:border-primary flex h-11 items-center gap-0 rounded-full border border-white px-3 py-1 font-cta text-sm font-medium md:text-lg'
+          >
+            Submit
+            <ChevronRightIcon className='aspect-square w-8' />
+          </button>
+        )}
 
-      {loading ? (
-        <button className='border_gradient mt-4 flex h-11 items-center gap-0 px-3 py-1 font-cta text-sm font-medium md:text-lg'>
-          Loading...
-          <ArrowPathIcon className='aspect-square w-6 animate-spin' />
-        </button>
-      ) : (
-        <button
-          onClick={handleSubmit}
-          className='border_gradient mt-4 flex h-11 items-center gap-0 px-3 py-1 font-cta text-sm font-medium md:text-lg'
-        >
-          Submit
-          <ChevronRightIcon className='aspect-square w-8' />
-        </button>
-      )}
+        {success && (
+          <div className='text-white'>
+            Thank you for reaching out. We will get back to you soon.
+          </div>
+        )}
+      </div>
     </div>
   );
 }

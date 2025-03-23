@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Discover() {
   return (
-    <div className='flex w-full flex-col gap-4 md:flex-row md:justify-start'>
+    <div className='flex w-full flex-col gap-4 rounded-2xl md:flex-row md:justify-start'>
       <div className='w-full'>
         <h4 className='text-4xl font-bold'>Discover</h4>
         <div className='mt-4 grid grid-cols-2 gap-2 font-medium'>

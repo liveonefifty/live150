@@ -15,6 +15,15 @@ export default function Navbar() {
           </Link>
           <div className='flex items-center gap-1'>
             <Link
+              className='flex items-center gap-2 rounded-full border-2 border-[#25d366] px-6 py-2 text-[#25d366] hover:bg-gray-100'
+              href='https://wa.me/+17322735077'
+              target='_blank'
+            >
+              <Icon icon='akar-icons:whatsapp-fill' />
+              WhatsApp
+            </Link>
+
+            {/* <Link
               className='aspect-[119.66/40] h-[35px]'
               href='https://apps.apple.com/in/app/live-150/id6476695303'
               target='_blank'
@@ -33,7 +42,7 @@ export default function Navbar() {
                   src='/playstore.png'
                 />
               </div>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
