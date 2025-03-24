@@ -5,11 +5,11 @@ import { ChevronRightIcon } from '@heroicons/react/20/solid';
 
 export default function Newsletter() {
   return (
-    <div className='flex w-full flex-col justify-center gap-4'>
-      <h3 className='font-title text-3xl text-primary-100 md:text-5xl'>
+    <div className='flex w-full flex-col items-center justify-center gap-4'>
+      <h3 className='text-primary-100 text-center font-title text-3xl md:text-5xl'>
         Our Unique Approach
       </h3>
-      <p className='mt-4 text-xl text-primary-100'>
+      <p className='text-primary-100 mt-4 text-xl'>
         Scan the QR code to learn more.
       </p>
       <div className='flex w-full items-center justify-center'>
