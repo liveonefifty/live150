@@ -98,7 +98,7 @@ export default function ContactUs() {
             setNameError(false), setEmailError(false), setPhoneError(false);
           }}
           onChange={(e) => setData({ ...data, name: e.target.value })}
-          className='w-full rounded-full border-primary-50 bg-white px-4 py-2 text-xl text-secondary outline-none placeholder:text-xl'
+          className='border-primary-100 w-full rounded-full bg-white px-4 py-2 text-sm text-secondary outline-none placeholder:text-xs md:text-xl md:placeholder:text-xl'
         />
         <input
           type='text'
@@ -107,7 +107,7 @@ export default function ContactUs() {
           }}
           onChange={(e) => setData({ ...data, userEmail: e.target.value })}
           placeholder='Your email'
-          className='w-full rounded-full border-primary-100 bg-white px-4 py-2 text-xl text-secondary outline-none placeholder:text-xl'
+          className='border-primary-100 w-full rounded-full bg-white px-4 py-2 text-sm text-secondary outline-none placeholder:text-xs md:text-xl md:placeholder:text-xl'
         />
         <input
           type='number'
@@ -116,7 +116,7 @@ export default function ContactUs() {
           }}
           placeholder='Your Phone Number'
           onChange={(e) => setData({ ...data, phone: e.target.value })}
-          className='w-full rounded-full border-primary-100 bg-white px-4 py-2 text-xl text-secondary outline-none placeholder:text-xl'
+          className='border-primary-100 w-full rounded-full bg-white px-4 py-2 text-sm text-secondary outline-none placeholder:text-xs md:text-xl md:placeholder:text-xl'
         />
         <div className='text-md mt-2 flex w-full items-center px-4 text-red-600'>
           {emailError && 'Enter a valid email'}
@@ -126,16 +126,16 @@ export default function ContactUs() {
       </div>
 
       {/* {messageError && ( "Message is required" )} */}
-      <div className='mt-4 flex flex-col items-center gap-2 md:flex-row'>
+      <div className='mt-4 flex w-full flex-col items-center gap-2 md:flex-row'>
         {loading ? (
-          <button className='hover:bg-primary hover:border-primary flex h-11 items-center gap-0 rounded-full border border-white px-3 py-1 font-cta text-sm font-medium md:text-lg'>
+          <button className='flex h-11 items-center justify-center gap-0 rounded-full border border-white px-3 py-1 font-cta text-sm font-medium hover:border-primary hover:bg-primary max-md:w-full md:text-lg'>
             Loading...
             <ArrowPathIcon className='aspect-square w-6 animate-spin' />
           </button>
         ) : (
           <button
             onClick={handleSubmit}
-            className='hover:bg-primary hover:border-primary flex h-11 items-center gap-0 rounded-full border border-white px-3 py-1 font-cta text-sm font-medium md:text-lg'
+            className='flex h-11 items-center justify-center gap-0 rounded-full border border-white px-3 py-1 font-cta text-sm font-medium hover:border-primary hover:bg-primary max-md:w-full md:text-lg'
           >
             Submit
             <ChevronRightIcon className='aspect-square w-8' />
