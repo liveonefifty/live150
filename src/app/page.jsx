@@ -28,18 +28,30 @@ export default function Home() {
             ></video>
 
             <div className='absolute mb-5 hidden justify-between px-4 md:flex'>
-              <button className='rounded-full bg-primary px-6 py-2 text-xl text-white'>
-                Join the waitlist
-              </button>
+              <Link
+                href='https://apps.apple.com/in/app/live-150/id6476695303'
+                target='_blank'
+              >
+                <button className='rounded-full bg-primary px-6 py-2 text-xl text-white'>
+                  Download the App
+                </button>
+              </Link>
+
               {/* <div className='flex gap-4 px-6 py-2 text-xl'>
                 <span>Follow our Journey</span>
               </div> */}
             </div>
           </div>
           <div className='flex w-full items-center justify-center px-4 md:hidden'>
-            <button className='w-full rounded-full bg-primary px-6 py-2 text-xl text-white'>
-              Join the waitlist
-            </button>
+            <Link
+              href='https://apps.apple.com/in/app/live-150/id6476695303'
+              target='_blank'
+              className='w-full'
+            >
+              <button className='w-full rounded-full bg-primary px-6 py-2 text-xl text-white'>
+                Download the App
+              </button>
+            </Link>
             {/* <div className='flex gap-4 px-6 py-2 text-xl'>
                 <span>Follow our Journey</span>
               </div> */}
@@ -364,9 +376,14 @@ export default function Home() {
             </div>
           </motion.div>
         </div>
-        <button className='mt-12 w-full rounded-full bg-primary px-6 py-2 text-xl text-white md:mt-12 md:w-fit'>
-          Join the waitlist
-        </button>
+        <Link
+          href='https://apps.apple.com/in/app/live-150/id6476695303'
+          target='_blank'
+        >
+          <button className='mt-12 rounded-full bg-primary px-6 py-2 text-xl text-white'>
+            Download the App
+          </button>
+        </Link>
       </motion.section>
 
       <motion.section
@@ -444,9 +461,14 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <button className='mt-12 w-full rounded-full bg-primary px-6 py-2 text-xl text-white md:mt-12 md:w-fit'>
-          Join the waitlist
-        </button>
+        <Link
+          href='https://apps.apple.com/in/app/live-150/id6476695303'
+          target='_blank'
+        >
+          <button className='mt-8 rounded-full bg-primary px-6 py-2 text-xl text-white'>
+            Download the App
+          </button>
+        </Link>
       </motion.section>
 
       <motion.section
@@ -516,9 +538,14 @@ export default function Home() {
 
       <section className='mx-auto mt-10 w-full max-w-screen-2xl'>
         <SplitGrid />
-        <button className='mt-6 w-full rounded-full bg-primary px-6 py-2 text-xl text-white md:w-fit'>
-          Reserve your spot
-        </button>
+        <Link
+          href='https://apps.apple.com/in/app/live-150/id6476695303'
+          target='_blank'
+        >
+          <button className='mt-6 rounded-full bg-primary px-6 py-2 text-xl text-white'>
+            Download the App
+          </button>
+        </Link>
       </section>
 
       <section className='mx-auto mt-10 w-full max-w-screen-2xl'>
