@@ -64,7 +64,7 @@ export default function Globalfooter() {
           </Link>
         </div>
         <div className='text-md font-title font-bold text-black'>
-          All right reserved. HealthHustlerai Pvt Ltd.
+          All right reserved.
         </div>
         <div className='flex aspect-[397/88] h-10 justify-start'>
           <LogoMark />
