@@ -2,6 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ChevronRightIcon } from '@heroicons/react/20/solid';
+import Image from 'next/image';
 
 export default function Newsletter() {
   return (
@@ -9,16 +10,21 @@ export default function Newsletter() {
       <h3 className='text-primary-100 text-center font-title text-3xl md:text-5xl'>
         Our Unique Approach
       </h3>
-      <p className='text-primary-100 mt-4 text-xl'>
-        Scan the QR code to learn more.
-      </p>
+      <p className='text-primary-100 mt-4 text-xl'>Start chatting today</p>
       <div className='flex w-full items-center justify-center'>
         <Link
           className='mt-4 aspect-square w-full max-w-xs'
           href='https://wa.me/+17322735077'
           target='_blank'
         >
-          <QrCode />
+          <div className=' w-full relative aspect-square max-w-[300px]'>
+            <Image
+              src='/qr.png'
+              fill
+              alt='QR Code'
+           />
+
+          </div>
         </Link>
       </div>
       {/* <div className='mt-10 w-[80%]'>
