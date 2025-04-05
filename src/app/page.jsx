@@ -303,8 +303,9 @@ export default function Home() {
                   fill
                 />
               </motion.div>
-              <h3 className='text-center text-3xl font-bold text-primary'>
-                Heal and Thrive
+              <h3 className='text-center text-xl font-bold'>
+                For those with chronic illness who need to get better and back
+                on track
               </h3>
             </motion.div>
           </motion.div>
@@ -325,8 +326,9 @@ export default function Home() {
                   fill
                 />
               </motion.div>
-              <h3 className='text-center text-3xl font-bold text-primary'>
-                Stronger Everyday
+              <h3 className='text-center text-xl font-bold'>
+                For those who are healthy or managing a condition but want to
+                level up
               </h3>
             </motion.div>
           </motion.div>
@@ -347,8 +349,9 @@ export default function Home() {
                   fill
                 />
               </motion.div>
-              <h3 className='text-center text-3xl font-bold text-primary'>
-                Master your Wellness
+              <h3 className='text-center text-xl font-bold'>
+                For high performers who want to stay on track and refine their
+                health
               </h3>
             </motion.div>
           </motion.div>
@@ -367,16 +370,11 @@ export default function Home() {
         transition={{ duration: 0.5, delay: 0.1 }}
         className='from-primary-200 to-primary-250 m-auto mt-4 flex w-full max-w-screen-2xl flex-col items-center justify-center rounded-[40px] bg-secondary bg-gradient-to-br px-6 py-12 md:hidden md:px-14 md:py-10'
       >
-        <h2
-        
-          className='text-primary-100 w-full text-center font-title text-3xl font-bold text-white md:text-5xl'
-        >
+        <h2 className='text-primary-100 w-full text-center font-title text-3xl font-bold text-white md:text-5xl'>
           Your Body's Power Unlocked
         </h2>
         <div className='mt-12 flex w-full flex-col gap-6 md:flex-row'>
-          <div
-            
-          >
+          <div>
             <div className='bg-primary-50 flex w-full flex-col gap-4 rounded-[30px] bg-white p-4 pb-10 duration-300 hover:scale-[1.025]'>
               <div className='bg-primary-150 relative aspect-video w-full overflow-hidden rounded-3xl'>
                 <Image
@@ -386,16 +384,14 @@ export default function Home() {
                   fill
                 />
               </div>
-              <h3 className='text-center text-3xl font-bold text-primary'>
-                Heal and Thrive
+              <h3 className='text-center text-xl font-bold'>
+                For those with chronic illness who need to get better and back
+                on track
               </h3>
             </div>
           </div>
 
-          <div
-           
-            className='flex w-full gap-10'
-          >
+          <div className='flex w-full gap-10'>
             <div className='bg-primary-50 flex w-full flex-col gap-4 rounded-[30px] bg-white p-4 pb-10 duration-300 hover:scale-[1.025]'>
               <div className='bg-primary-150 relative aspect-video w-full overflow-hidden rounded-3xl'>
                 <Image
@@ -405,16 +401,14 @@ export default function Home() {
                   fill
                 />
               </div>
-              <h3 className='text-center text-3xl font-bold text-primary'>
-                Stronger Everyday
+              <h3 className='text-center text-xl font-bold'>
+                For those who are healthy or managing a condition but want to
+                level up
               </h3>
             </div>
           </div>
 
-          <div
-            
-            className='flex w-full gap-10'
-          >
+          <div className='flex w-full gap-10'>
             <div className='bg-primary-50 flex w-full flex-col gap-4 rounded-[30px] bg-white p-4 pb-10 duration-300 hover:scale-[1.025]'>
               <div className='bg-primary-150 relative aspect-video w-full overflow-hidden rounded-3xl'>
                 <Image
@@ -424,8 +418,9 @@ export default function Home() {
                   fill
                 />
               </div>
-              <h3 className='text-center text-3xl font-bold text-primary'>
-                Master your Wellness
+              <h3 className='text-center text-xl font-bold '>
+                For high performers who want to stay on track and refine their
+                health
               </h3>
             </div>
           </div>
@@ -436,8 +431,6 @@ export default function Home() {
           </button>
         </Link>
       </motion.section>
-
-     
 
       <motion.section
         initial={{ opacity: 0, y: 20 }}
