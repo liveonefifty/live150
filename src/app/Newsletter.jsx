@@ -14,7 +14,7 @@ export default function Newsletter() {
       <div className='flex w-full items-center justify-center'>
         <Link
           className='mt-4 aspect-square w-full max-w-xs'
-          href='https://wa.me/+17322735077?text=Welcome%20aboard%20Live150!%20-%20where%20your%20health%20comes%20first.%20Tap%20%27Send%27%20to%20begin%20your%20journey'
+          href='https://wa.me/+17322735077?text=Welcome%20aboard%20Live150%F0%9F%8C%9F%20-%20where%20your%20health%20comes%20first.%20Tap%20%27Send%27%20to%20begin%20your%20journey'
           target='_blank'
         >
           <div className=' w-full relative aspect-square max-w-[300px]'>
