@@ -4,6 +4,11 @@ const UTMTracker = () => {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
+    window.mixpanel.init('be26096e9b48d55acd9842eb6c07de27', {
+      debug: true,
+      track_pageview: false,
+    });
+    
     // Extract UTM parameters from URL
     const params = new URLSearchParams(window.location.search);
     const utms = {
@@ -13,6 +18,8 @@ const UTMTracker = () => {
       utm_term: params.get('utm_term'),
       utm_content: params.get('utm_content'),
     };
+
+    window.mixpanel.track('website_visit', utms);
 
     // Initialize HubSpot queue if it doesn't exist
     window._hsq = window._hsq || [];
