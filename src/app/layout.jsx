@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Globalfooter from './Globalfooter';
 import MotionConfigRoot from './MotionConfig';
 import Script from 'next/script';
+import UTMTracker from './UTMTracker';
 
 export const metadata = {
   title: 'Live 150',
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
             <Globalfooter />
           </footer>
         </MotionConfigRoot>
+        <UTMTracker />
       </body>
     </html>
   );
