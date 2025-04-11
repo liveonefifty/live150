@@ -12,6 +12,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang='en'>
       <body className='flex w-full flex-col text-secondary'>
@@ -20,7 +21,7 @@ export default function RootLayout({ children }) {
           id="hubspot-script"
           src="https://js-na2.hs-scripts.com/242396441.js"
           strategy="afterInteractive"
-        />
+        />        
         <MotionConfigRoot>
           <Navbar />
           <main className='px-2'>{children}</main>
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
           </footer>
         </MotionConfigRoot>        
       </body>
+      <UTMTracker/>
     </html>
   );
 }
