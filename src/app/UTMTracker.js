@@ -54,14 +54,14 @@ export default function UTMTracker() {
 
       // ✅ 3. Metadata
       const meta = {
-        referrer: document.referrer,
-        user_agent: navigator.userAgent,
-        language: navigator.language,
-        platform: navigator.platform,
-        screen_resolution: `${window.screen.width}x${window.screen.height}`,
+        //Referrer: document.referrer,
+        //"User Agent": navigator.userAgent,
+        Language: navigator.language,
+        Platform: navigator.platform,
+        //"Screen Resolution": `${window.screen.width}x${window.screen.height}`,
       };
       if (campaign) {
-        meta.campaign_slug = campaign;
+        //meta["Campaign Slug"] = campaign;
       }
 
       // ✅ 4. Add geo info
@@ -70,11 +70,11 @@ export default function UTMTracker() {
         const fullData = {
           ...finalUTMs,
           ...meta,
-          ip: geo.ip,
-          city: geo.city,
-          region: geo.region,
-          country: geo.country_name,
-          org: geo.org,
+          "IP Address": geo.ip,
+          "City From IP": geo.city,
+          "Region From IP": geo.region,
+          "Country From IP": geo.country_name,
+          "Org From IP": geo.org,
         };
 
         track('Website Visit', fullData);
