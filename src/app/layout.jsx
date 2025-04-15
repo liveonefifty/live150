@@ -27,7 +27,8 @@ export default function RootLayout({ children }) {
           <footer>
             <Globalfooter />
           </footer>
-        </MotionConfigRoot>        
+        </MotionConfigRoot>  
+        <UTMTracker/>
       </body>
     </html>
   );
